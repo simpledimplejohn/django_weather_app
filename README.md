@@ -7,6 +7,12 @@ A Django MVC app accessing the openweather api
 - Decouple
 - requests
 
+## To Use This Repository
+- Clone or fork this repository
+- Create a .env file in the root directory
+    API_KEY=''
+    SECRET_KEY=''
+- `python3 manage.py runservers`
 
 # Django Wiki
 Using the Django framework to create an app for the Rapid7 AP
