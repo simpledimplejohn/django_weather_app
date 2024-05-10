@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Results</title>
+</head>
+<body>
+    <h1>Weather Results</h1>
+    {% if weather %}
+        <div>
+            <p>Temperature: {{ weather.current.temp_c }}°C</p>
+            <p>Condition: {{ weather.current.condition.text }}</p>
+            <img src="{{ weather.current.condition.icon }}" alt="Weather icon">
+        </div>
+    {% else %}
+        <p>No weather data available.</p>
+    {% endif %}
+    <a href="{% url 'get_weather' %}">Check another location</a>
+</body>
+</html>
