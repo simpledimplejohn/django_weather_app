@@ -117,28 +117,29 @@ button[type=button]
     `py manage.py migrate`
  
 ## Use command line to CRUD objects
-`py manage.py shell`
-`from main.models import Item, ToDoList`
-`t = ToDoList(name="John List")`
-`t.save()`
-`ToDoList.objects.all()`
-Getbyid id
-`ToDoList.objects.get(id=1)`
-Getbyname
-`ToDoList.objects.get(name="mine")`
-Create Item
-(get a ToDoList first)
-`t.item_set.all()`
-`t`
-`t.item_set.create(text="stuff", complete=False)`
-Filter
-`t.filter(name__startswith="mine")`
-Delete
-`del_object = t.get(id=1)` # get the object
-`del_object.delete()`
+- Setup
+    - `py manage.py shell`
+    - `from main.models import Item, ToDoList`
+    - `t = ToDoList(name="John List")`
+    - `t.save()`
+    - `ToDoList.objects.all()`
+- Getbyid id
+    - `ToDoList.objects.get(id=1)`
+- Getbyname 
+    - `ToDoList.objects.get(name="mine")`
+- Create Item
+- (get a ToDoList first)
+    - `t.item_set.all()`
+    - `t`
+    - `t.item_set.create(text="stuff", complete=False)`
+- Filter
+    - `t.filter(name__startswith="mine")`
+- Delete
+    - `del_object = t.get(id=1)` # get the object
+    - `del_object.delete()`
 ## Admin Dashboard
-`py manage.py createsuperuser`
-Add to main/admin.py
-from .models import ToDoList
+- `py manage.py createsuperuser`
+- Add to main/admin.py
+- from .models import ToDoList
  
-admin.site.register(ToDoList)
+- admin.site.register(ToDoList)
