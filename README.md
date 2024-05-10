@@ -1,10 +1,15 @@
+# Django Weather App
+A Django MVC app accessing the openweather api
+
+## Tools
+- Django
+- Python3
+- Decouple
+- requests
+
+
 # Django Wiki
 Using the Django framework to create an app for the Rapid7 AP
- 
-## Quick Setup with Mac
-
-
-
 
 ## Setup Decouple
 https://www.youtube.com/watch?v=LkyhTqDrSxA
